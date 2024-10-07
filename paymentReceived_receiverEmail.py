@@ -3,15 +3,15 @@ import ssl
 import smtplib
 
 email_sender = "paymentgatewaysimulator@gmail.com"  # Sender's email (the service)
-password = "bupz fhaj fzpp fwdp"  # Remove this before uploading to GitHub
-email_receiver = "harshshah0070@gmail.com"
+password = "app password"  # Remove this before uploading to GitHub
+email_receiver = "email id"
 
 # Assuming these details are already fetched from the database
-sender_first_name = "Harsh"  # Sender's first name
-sender_last_name = "Shah"  # Sender's last name
+sender_first_name = "first"  # Sender's first name
+sender_last_name = "last"  # Sender's last name
 receiver_acc_num = 12345678  # Receiver's account number
-receiver_first_name = "Soham"  # Receiver's first name
-receiver_last_name = "Bose"  # Receiver's last name
+receiver_first_name = "first"  # Receiver's first name
+receiver_last_name = "last"  # Receiver's last name
 received_amt = 1000  # Amount received
 
 # Email to be sent to the receiver
