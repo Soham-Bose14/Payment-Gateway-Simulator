@@ -10,12 +10,12 @@ def generate_random_6_digit()->str:
 otp = generate_random_6_digit()
 print(otp)
 
-email_sender = "paymentgatewaysimulator@gmail.com"
-password = "bupz fhaj fzpp fwdp" #remove this while uploading on GitHub
+email_sender = "sender_email"
+password = "app_password" #remove this while uploading on GitHub
 
 #replace with email from db
 #email of person changing account password
-email_receiver = "harshshah0070@gmail.com" 
+email_receiver = "receiver_email" 
 subject = "Request for Password Change"
 body = f"""
 <html>
