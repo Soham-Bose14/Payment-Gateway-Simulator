@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUXPAY</title>
+</head>
+<body>
+    <h1>WELCOME TO FLUXPAY</h1>
+    <br>
+    <h3>Sign In</h3>
+    <br>
+    <form id="submit_form" onsubmit="event.preventDefault(); login();">
+        <label for="flux">Flux ID:</label>
+        <input type="text" name="Flux ID" id="f_id" placeholder="Enter your Flux ID">
+        <br>
+        <label for="pswd">Password:</label>       
+        <input type="password" name="Password" id="pswd" placeholder="Enter your password">
+        <span class="toggle_btn" onclick="togglePassword()">Show</span>
+        <br>
+        <button id="signIn" type="submit">Sign In</button>
+    </form>
+    <p>Don't have an account?
+        <br>
+        <span class="signUpButton" onclick="openSignUp()">Sign Up</span>
+    </p>
+    <script src="/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CREATE YOUR FLUXPAY ACCOUNT</h1>
+    <br>
+    <br>
+    <form id="submit_form" onsubmit="event.preventDefault(); signUp()">
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" id="f_name" placeholder="Enter your First Name">
+        <br>
+        <label for="last_name">Last Name: </label>
+        <input type="text" name="last_name" id="l_name" placeholder="Enter your Last Name">
+        <br>
+        <label for="pin">PIN: </label>
+        <input type="number" name="pin" id="pin" placeholder="Enter your PIN">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" placeholder="Enter your Email">
+        <br>
+        <label for="bank_acc">Bank Account Number: </label>
+        <input type="number" name="bank_acc" id="bank_acc" placeholder="Enter your Bank Account Number">
+        <br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="pswd" placeholder="Enter your Password">
+        <span class="toggle_btn" onclick="togglePassword()">Show</span>
+        <br>
+        <label for="phn_no">Phone Number: </label>
+        <input type="number" name="phn_no" id="phn_no" placeholder="Enter your Phone Number">
+        <br>
+        <label for="dob">Date Of Birth: </label>
+        <input type="date" name="date" id="dob" placeholder="Enter your Date Of Birth">
+        <br>
+        <label for="gender">Gender: </label>
+        <input type="text" name="gender" id="gender" placeholder="Enter your Gender">
+        <br>
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script src="/login.js"></script>
+</body>
+</html>

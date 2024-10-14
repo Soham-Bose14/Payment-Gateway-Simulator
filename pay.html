@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay</title>
+</head>
+<body>
+    <h2>Enter Recipient Details</h2>
+    <form id="recipient_details" onsubmit="event.preventDefault(); checkBalanceAndPay();">
+        <label for="id">Recipient's ID: </label>
+        <input type="text" name="Recipient ID" id="rcp_id" placeholder="Enter Recipient's ID">
+        <br>
+        <label for="bank">Recipient's Bank Account Number: </label>
+        <input type="text" name="bank_acc_no" id="bank_acc_no" placeholder="Enter Recipient's Bank Account No">
+        <br>
+        <label for="amount">Amount: </label>
+        <input type="number" name="amount" id="amount" placeholder="Enter the Amount to be trasnsferred">
+        <br>
+        <label for="pin">PIN: </label>
+        <input type="number" name="PIN" id="PIN" placeholder="Enter your PIN">
+        <br>
+        <button id="sendMoney" type="submit">Send</button>
+
+    </form>
+    <script src="homeFunctions.js"></script>
+</body>
+</html>
