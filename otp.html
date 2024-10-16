@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="otp-container">
+        <h2>OTP Verification</h2>
+        <p>An OTP has been sent to your registered email.</p>
+        
+        <!-- OTP Input Field -->
+        <label for="otp">Enter OTP: </label>
+        <input type="text" id="otp" name="otp" placeholder="Enter OTP">
+
+        <!-- Login Button -->
+        <button id="login-btn" onclick="login()" style="margin-bottom: 10px;">Login</button>
+        <br>
+        <!-- Resend OTP Button -->
+        <button id="resend-btn" onclick="resendOTP()" disabled>Resend OTP (60s)</button>
+
+        <!-- Countdown Message -->
+        <p id="countdown-message">You can resend OTP in <span id="countdown">60</span> seconds.</p>
+    </div>
+
+    <script src="otp.js"></script>
+</body>
+</html>
