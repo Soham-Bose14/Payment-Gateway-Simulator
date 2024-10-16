@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>CREATE YOUR FLUXPAY ACCOUNT</h1>
@@ -36,7 +37,12 @@
         <input type="date" name="date" id="dob" placeholder="Enter your Date Of Birth">
         <br>
         <label for="gender">Gender: </label>
-        <input type="text" name="gender" id="gender" placeholder="Enter your Gender">
+        <select name="gender" id="gender">
+            <option value="" disabled selected>Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
         <br>
         <button type="submit">Submit</button>
 

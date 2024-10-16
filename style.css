@@ -1,0 +1,100 @@
+/* General Styles for All Pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.toggle_btn {
+    cursor: pointer;
+    color: #007BFF;
+    font-size: 14px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+/* For Links and Clickable Elements */
+.signUpButton {
+    color: #007BFF;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+.signUpButton:hover {
+    text-decoration: underline;
+}
+
+/* Page-Specific Styles */
+#signIn {
+    background-color: #28a745;
+}
+
+#signIn:hover {
+    background-color: #218838;
+}
+
+#sendMoney {
+    background-color: #FF6347;
+}
+
+#sendMoney:hover {
+    background-color: #cc523b;
+}
+
+p {
+    text-align: center;
+}
+
