@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLUXPAY</title>
     <link rel="stylesheet" href="./style.css">
+
+    <!-- Add the reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <h1>WELCOME TO FLUXPAY</h1>
@@ -19,6 +22,10 @@
         <input type="password" name="Password" id="pswd" placeholder="Enter your password">
         <span class="toggle_btn" onclick="togglePassword()">Show</span>
         <br>
+        
+        <!-- Add the reCAPTCHA widget -->
+        <div class="g-recaptcha" data-sitekey=""></div>
+        
         <button id="signIn" type="submit">Sign In</button>
     </form>
     <p>Don't have an account?

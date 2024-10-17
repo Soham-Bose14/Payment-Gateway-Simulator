@@ -1,23 +1,29 @@
-function togglePassword(){
+function togglePassword() {
     var pswd_field = document.getElementById("pswd");
     var toggle_button = document.querySelector(".toggle_btn");
 
-    if(pswd_field.type==="password"){
+    if (pswd_field.type === "password") {
         pswd_field.type = "text";
         toggle_button.textContent = "Hide";
-    }
-    else{
+    } else {
         pswd_field.type = "password";
         toggle_button.textContent = "Show";
     }
 }
 
-function login(){
-    console.log("Login Successful");
-    
+function login() {
+    console.log("Login Attempted");
+
     //Get form data
     const fluxID = document.getElementById("f_id").value;
     const password = document.getElementById("pswd").value;
+    const recaptchaResponse = grecaptcha.getResponse(); // Get the reCAPTCHA response
+
+    // Ensure reCAPTCHA was completed
+    if (!recaptchaResponse) {
+        alert("Please complete the reCAPTCHA.");
+        return;
+    }
 
     // Send data to the API using fetch
     fetch("/login", {
@@ -25,27 +31,23 @@ function login(){
         headers: {
             "Content-Type": "application/json", // Ensure the data is sent in JSON format
         },
-        body: JSON.stringify({ fluxID, password }), // Convert form data to JSON
+        body: JSON.stringify({ fluxID, password, recaptchaResponse }), // Send reCAPTCHA response along with form data
     })
     .then((response) => {
         if (response.ok) {
-            // If the response is successful, redirect to the home.html page
             window.location.href = "/home"; //Redirects to the 'home.html'
-            console.log("Login successful!");
-            return response.json(); // Parse the response JSON if needed
+            return response.json();
         } else {
             throw new Error("Login failed");
         }
     })
-    
     .catch((error) => {
         console.error("Error:", error);
         alert("Login failed. Please try again.");
     });
 }
 
-function openSignUp(){
-    // Directly navigate to the sign-up page
+function openSignUp() {
     window.location.href = "/signUp"; // This will call the /signUp route in app.js
 }
 
@@ -58,10 +60,7 @@ function formatDateToMySQL(date) {
            ('0' + date.getSeconds()).slice(-2);
 }
 
-// const formattedDate = formatDateToMySQL(currentDateTime);
-
-function signUp(){
-    //Get user data from sign up page
+function signUp() {
     let password = document.getElementById("pswd").value;
     const currentDateTime = new Date()
 
@@ -74,10 +73,8 @@ function signUp(){
         phoneNumber: document.getElementById("phn_no").value,
         dob: document.getElementById("dob").value,
         gender: document.getElementById("gender").value,
-        
-        gateway_id: 12345999, //Get it done using python random function
-        password_hash: 9439579347, //Get it done using python
-        // last_login: 0, //Get it from python time.time() function
+        gateway_id: 12345999, // Get it done using python random function
+        password_hash: 9439579347, // Get it done using python
         last_login: formatDateToMySQL(currentDateTime),
     }
     fetch("/signUpDetails", {
@@ -90,3 +87,4 @@ function signUp(){
 
     window.location.href = "/home";
 }
+
